@@ -1,0 +1,615 @@
+@charset "utf-8";
+
+/* 1600px ~ */
+@media all and (min-width:1600px) {
+
+    /*로고*/
+    .logo-mobile {
+        display: none;
+    }
+
+    /*헤더*/
+    header {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /*상단바*/
+    .nav {
+        position: fixed;
+        width: 100%;
+        height: 12vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        transition: 0.3s ease-in-out;
+        padding: 0 5%;
+        z-index: 2;
+    }
+
+    /*스크롤 시 nav*/
+    .navbar-effect {
+        padding: 0 12%;
+    }
+
+    /*text*/
+    .header-text {
+        position: absolute;
+        top: 32%;
+        left: 16%;
+    }
+
+    .header-text p {
+        font-size: 5.5em;
+        line-height: 8rem;
+        font-weight: 600;
+        color: #000;
+        font-family: 'wedrive';
+        letter-spacing: 1px;
+    }
+
+    /*컨텐츠*/
+    .contents {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+        height: 1080px;
+    }
+
+    /*about*/
+    #about {
+        position: relative;
+    }
+
+    #about h2 {
+        font-size: 5rem;
+        padding: 6% 0 0 10%;
+        font-family: 'GmarketSansMedium';
+    }
+
+    #about h1 {
+        font-family: 'JSArirang-Regular';
+        position: absolute;
+        width: 100%;
+        top: 12%;
+        left: 35%;
+        font-size: 9rem;
+        color: #eee;
+        letter-spacing: 2px;
+        transform: rotate(-5deg);
+    }
+
+    .about-flex {
+        width: 80%;
+        margin: 5% auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-flex p {
+        width: 100%;
+        font-size: 1.6rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 400;
+        line-height: 2.6rem;
+    }
+
+    .about-flex .about-img {
+        width: 500px;
+    }
+
+    /*work*/
+    #work {
+        position: relative;
+        width: 100%;
+        height: auto !important;
+        overflow-x: hidden;
+        background-color: #eee;
+        padding-bottom: 10%;
+    }
+
+    #work h2 {
+        font-size: 5rem;
+        padding: 6% 0 0 10%;
+        font-family: 'GmarketSansMedium';
+    }
+
+    .work-flex {
+        width: 80%;
+        margin: 8% auto 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .work-img {
+        width: 50%;
+    }
+
+    .work-text {
+        width: 50%;
+        margin-left: 10%;
+    }
+
+    .work-text h4 {
+        font-size: 3rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 600;
+        line-height: 5rem;
+        margin-bottom: 5%;
+        letter-spacing: 1px;
+    }
+
+    .work-text p {
+        font-size: 1.5rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 400;
+        line-height: 2.5rem;
+    }
+
+    .work-text p:nth-child(2) {
+        font-size: 1.8rem !important;
+    }
+
+    #work-btn {
+        background: #000;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 3% 17%;
+        font-family: 'S-CoreDream-3Light';
+        margin-top: 5%;
+        display: inline-block;
+        border: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    #work-btn:hover {
+        transition: all 0.2s ease;
+        color: #000;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid #000;
+    }
+
+    /*portfolio*/
+    #portfolio {
+        position: relative;
+        width: 100%;
+        height: auto !important;
+        overflow-x: hidden;
+        padding-bottom: 10%;
+    }
+
+    #portfolio h2 {
+        font-size: 5rem;
+        padding: 6% 0 0 10%;
+        font-family: 'GmarketSansMedium';
+    }
+
+    .portfolio-flex {
+        width: 80%;
+        margin: 8% auto 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .portfolio-img {
+        width: 50%;
+    }
+
+    .portfolio-text {
+        width: 40%;
+        margin-left: 10%;
+    }
+
+    .portfolio-text h4 {
+        font-size: 3rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 600;
+        line-height: 5rem;
+        margin-bottom: 5%;
+        letter-spacing: 1px;
+    }
+
+    .portfolio-text p {
+        font-size: 1.5rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 400;
+        line-height: 2.5rem;
+    }
+
+    .portfolio-text p:nth-child(2) {
+        font-size: 1.8rem !important;
+    }
+
+    #portfolio-btn {
+        background: #000;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 3% 17%;
+        font-family: 'S-CoreDream-3Light';
+        margin-top: 5%;
+        display: inline-block;
+        border: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    #portfolio-btn:hover {
+        transition: all 0.2s ease;
+        color: #000;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid #000;
+    }
+
+    /*포트폴리오 하단설명*/
+    .portfolio-bottom {
+        width: 80%;
+        margin: 5% auto 0;
+    }
+
+    .portfolio-bottom h3 {
+        font-size: 2.5rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 600;
+    }
+
+    .portfolio-bottom p {
+        margin-top: 2%;
+        font-size: 1.5rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 400;
+        line-height: 2.5rem;
+    }
+
+    .portfolio-color {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .color-chip-box {
+        display: flex;
+        margin: 0 2%;
+    }
+
+    .portfolio-color .color-chip {
+        width: 100px;
+        height: 25px;
+        margin-left: 5px;
+    }
+
+    .portfolio-bottom-r .portfolio-color {
+        justify-content: end;
+    }
+
+    .portfolio-bottom-r h3 {
+        text-align: right;
+    }
+
+    .portfolio-bottom-r p {
+        text-align: right;
+    }
+
+
+}
+
+
+/* ~ 1599px */
+@media all and (max-width:1599px) {
+
+    /*로고*/
+    .logo-pc {
+        display: none;
+    }
+
+    /*헤더 비디오*/
+    #header-video {
+        width: 100%;
+        height: 100vh !important;
+        object-fit: fill;
+    }
+
+    /*헤더*/
+    header {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden !important;
+    }
+
+    /*상단바*/
+    .nav {
+        display: none;
+    }
+
+    /*text*/
+    .header-text {
+        position: absolute;
+        top: 38%;
+        left: 10%;
+    }
+
+    .header-text p {
+        font-size: 3rem;
+        line-height: 5rem;
+        font-weight: 600;
+        color: #000;
+        font-family: 'wedrive';
+        letter-spacing: 1px;
+    }
+
+    /*컨텐츠*/
+    .contents {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /*about*/
+    #about {
+        position: relative;
+        padding-bottom: 15%;
+    }
+
+    #about h2 {
+        font-size: 2.5rem;
+        padding: 15% 0 0 5%;
+        font-family: 'GmarketSansMedium';
+        position: relative;
+        z-index: 2;
+    }
+
+    #about h1 {
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: calc(150/720*100vw);
+        top: 5%;
+        left: 0;
+        color: #fff;
+        z-index: 1;
+    }
+
+    .about-flex {
+        width: 100%;
+        display: flex;
+        flex-flow: column-reverse;
+        margin: -10% 0 0 0;
+        padding:0 5%;
+    }
+
+    .about-flex p {
+        width: 100%;
+        font-size: 1rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 400;
+        line-height: 1.5rem;
+        margin: 0 auto 2%;
+    }
+
+    .about-flex .about-img {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    /*work*/
+    #work {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        background-color: #eee;
+    }
+
+    #work h2 {
+        font-size: 2.5rem;
+        padding: 15% 0 0 6%;
+        font-family: 'GmarketSansMedium';
+    }
+
+    .work-flex {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-flow: column-reverse;
+        margin: 7% 0 2% 0;
+    }
+
+    .work-flex:nth-child(2) {
+        flex-flow: column !important;
+    }
+
+    .work-img {
+        width: 90%;
+    }
+
+    .work-text {
+        width: 90%;
+    }
+
+    .work-text h4 {
+        font-size: 2rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 600;
+        line-height: 4rem;
+        letter-spacing: 1px;
+    }
+
+    .work-text p {
+        font-size: 1rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 400;
+        line-height: 2rem;
+        float: left;
+    }
+
+    .work-text p:nth-child(2) {
+        border: 1px solid #000;
+        padding: 0 2%;
+        margin-right: 2%;
+    }
+
+    #work-btn {
+        background: #000;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 3% 20%;
+        font-family: 'S-CoreDream-3Light';
+        margin: 3% 0 5% 0;
+        display: inline-block;
+        border: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        width: 100%;
+        letter-spacing: 1px;
+    }
+
+    #work-btn:hover {
+        transition: all 0.2s ease;
+        color: #000;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid #000;
+    }
+
+    /*portfolio*/
+    #portfolio {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #portfolio h2 {
+        font-size: 2.5rem;
+        padding: 15% 0 0 6%;
+        font-family: 'GmarketSansMedium';
+    }
+
+    .portfolio-flex {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-flow: column-reverse;
+        margin: 7% 0 2% 0;
+    }
+
+    .portfolio-flex-c {
+        flex-flow: column !important;
+    }
+
+    .portfolio-img {
+        width: 90%;
+    }
+
+    .portfolio-text {
+        width: 90%;
+    }
+
+    .portfolio-text h4 {
+        font-size: 2rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 600;
+        line-height: 2.5rem;
+        margin: 2% 0;
+        letter-spacing: 1px;
+    }
+
+    .portfolio-text p {
+        font-size: 1rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 400;
+        line-height: 2rem;
+        float: left;
+    }
+
+    .portfolio-text p:nth-child(2) {
+        border: 1px solid #000;
+        padding: 0 2%;
+        margin-right: 2%;
+    }
+
+    #portfolio-btn {
+        background: #000;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 3% 20%;
+        font-family: 'S-CoreDream-3Light';
+        margin: 3% 0 5% 0;
+        display: inline-block;
+        border: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        width: 100%;
+        letter-spacing: 1px;
+    }
+
+    #portfolio-btn:hover {
+        transition: all 0.2s ease;
+        color: #000;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid #000;
+    }
+
+    #top-btn {
+        background-color: #99dff9;
+    }
+
+    /*포트폴리오 하단설명*/
+    .portfolio-bottom {
+        width: 90%;
+        margin: 2% auto 20%;
+    }
+
+    .portfolio-bottom h3 {
+        font-size: 1.5rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 600;
+    }
+
+    .portfolio-bottom p {
+        margin-top: 2%;
+        font-size: 1rem;
+        font-family: 'S-CoreDream-3Light';
+        font-weight: 400;
+        line-height: 2rem;
+    }
+
+    .portfolio-color {
+        width: 100%;
+        display: flex;
+        flex-flow: column-reverse;
+    }
+
+    .color-chip-box {
+        display: flex;
+        margin: 2% 0 5% 0;
+    }
+
+    .portfolio-color .color-chip {
+        width: 100px;
+        height: 25px;
+    }
+
+    .portfolio-color .color-chip:nth-child(1) {
+        margin-right: 5px;
+    }
+
+    .portfolio-bottom-r .portfolio-color {
+        justify-content: end;
+        flex-flow: column;
+    }
+
+}

@@ -1,0 +1,318 @@
+﻿@charset "utf-8";
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'wedrive';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/wedrive.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JSArirang-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/JSArirang-RegularA1.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/*video*/
+video::-webkit-media-controls {
+  display: none;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
+
+video::-webkit-media-controls-play-button {
+  display: none;
+}
+
+video::-webkit-media-controls-timeline {
+  display: none;
+}
+
+video::-webkit-media-controls-current-time-display {
+  display: none;
+}
+
+video::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+
+video::-webkit-media-controls-mute-button {
+  display: none;
+}
+
+video::-webkit-media-controls-volume-slider {
+  display: none;
+}
+
+/*스크롤 다운*/
+@keyframes move {
+  0% {
+    transform: translate(-50%, 10px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translate(-50%, 40px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-50%, 80px);
+    opacity: 0;
+  }
+}
+
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #000;
+  }
+}
+
+/*header*/
+.header-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#header-video {
+  width: 100%;
+  opacity: 0.7;
+}
+
+/*스크롤 시 nav*/
+.navbar-effect {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 7vh;
+}
+
+/*nav*/
+.nav h2 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #000;
+  font-family: 'Pretendard-Regular';
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-left: 50px;
+  font-weight: 500;
+  font-family: 'Pretendard-Regular';
+  padding: 5px 20px;
+  transition: all 0.2s ease;
+}
+
+.nav ul li a,
+.nav ul li a:after,
+.nav ul li a:before {
+  transition: all .5s;
+}
+
+.nav.stroke ul li a,
+.nav.fill ul li a {
+  position: relative;
+}
+
+.nav.stroke ul li a:after,
+.nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #fff;
+  height: 1px;
+}
+
+.nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+.nav.fill ul li a {
+  transition: all 0.5s;
+}
+
+.nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+
+.nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+.nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 0.8s forwards;
+  -webkit-animation: fill 0.8s forwards;
+  -moz-animation: fill 0.8s forwards;
+  opacity: 1;
+}
+
+/*nav click*/
+.nav_active {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/*top btn*/
+#top-btn {
+  display: inline-block;
+  background-color: #000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  transition: background-color .3s, opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9;
+}
+
+#top-btn::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  color: #fff;
+}
+
+#top-btn:hover {
+  cursor: pointer;
+  background-color: #99dff9;
+}
+
+#top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*스크롤 다운 버튼*/
+#scroll-down-animation {
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#scroll-down-animation .mouse {
+  margin: 0 auto;
+  display: block;
+  border-radius: 50px;
+  border: 2px solid #000;
+  width: 40px;
+  height: 80px;
+}
+
+#scroll-down-animation .move {
+  position: absolute;
+  background-color: #000;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: move 2s linear infinite;
+}
+
+#scroll-down-animation h2 {
+  color: #000;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  margin-top: 10px;
+}
